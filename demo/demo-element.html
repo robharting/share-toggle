@@ -1,0 +1,46 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../iron-icons/iron-icons.html">
+<link rel="import" href="../share-toggle.html">
+<link rel="import" href="../iron-iconset-svg/iron-iconset-svg.html">
+
+
+<dom-module id="demo-element">
+  <template>
+    <style>
+        :host {
+            font-family: sans-serif;
+            --share-toggle-color: lightgrey;
+            --share-toggle-outline-color: black;
+            --share-toggle-pressed-color: orange;
+        }
+    </style>
+  
+    <h3>Statically-configured share-toggles</h3>
+    
+    <share-toggle toggle-icon="social:share"></share-toggle>
+    <share-toggle toggle-icon="social:share" pressed></share-toggle>
+    
+    <h3>Data-bound share-toggle</h3>
+
+    <!-- curly brackets ({{}}} allow two-way binding -->
+    <share-toggle toggle-icon="social:share" pressed="{{isFav}}"></share-toggle>
+
+      <!-- use a computed binding to generate the message -->
+      <div><span>[[_message(isFav)]]</span></div>
+  </template>
+
+  <script>
+    class DemoElement extends Polymer.Element {
+      static get is() { return 'demo-element' }
+      _message(fav) {
+        if (fav) {
+          return 'Share page buttons here';
+        } 
+        else {
+          return 'Click or tab to share page';
+        }
+      }
+    }
+    customElements.define(DemoElement.is, DemoElement);
+    </script>
+</dom-module>
