@@ -1,29 +1,51 @@
-# Your first Polymer element
+# \<share-toggle>
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/robharting/todo/share-toggle)
+[![GitHub release](https://img.shields.io/github/release/robharting/todo/share-toggle/all.svg)](https://github.com/robharting/share-toggle)
 
-This repo goes with the [Build your first Polymer element tutorial](https://www.polymer-project.org/2.0/start/first-element/intro).
+_[Demo and API docs](https://www.webcomponents.org/element/robharting/todo/share-menu)_
 
-## Running the tutorial code
+A social share-toggle webcomponent for Polymer 2.
 
-You'll need to install some command-line tools to manage dependencies and to run the demo.
+## Features
+- Set the `auto-url`, `socials` and `pressed` properties. Toggle it and voila.
 
-1.  Download and install Node version 6.x or 7.x from [https://nodejs.org/](https://nodejs.org/). Node includes the node package manager command, `npm`.
+## Installation
+```
+bower install --save robharting/share-toggle
+```
 
-2.  Install `bower` and the Polymer CLI:
+## Usage
+#### Basic usage
+```html
+<share-toggle auto-url toggle-icon="social:share" facebook></share-toggle>
 
-        npm install -g bower polymer-cli
+```
+#### All the properties set
+```html
+<share-toggle
+    auto-url
+    toggle-icon="social:share"
+    pressed
+    facebook google twitter reddit vk blogger tumblr email>
+</share-toggle>
+      
+```
 
-3.  Clone this repo:
+## Supported socials
+The supported socials:
 
-        https://github.com/PolymerLabs/polymer-2-first-element.git
-        
-4.  Change directory to your local repo and install dependencies with `bower`:
+ - Facebook
+ - Google
+ - Twitter
+ - Reddit
+ - Vk
+ - Blogger
+ - Tumblr
+ - Email
+ 
+## Icons
+The icons used. Todo.
 
-        cd polymer-2-first-element
-        bower install
-        
-5.  To preview your element, run the Polymer development server from the repo directory:
+## Styling
 
-        polymer serve
-        
-    Open `localhost:8080/components/share-toggle/demo/` in your browser. (Note that the path uses `share-toggle`—the
-    component name listed in this element's `bower.json` file—rather than the actual directory name.) 
+Todo.
