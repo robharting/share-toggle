@@ -194,7 +194,7 @@
             this.pressed = !this.pressed;
         }
 
-        _share: function(event) {
+        _share(event) {
             var element = Polymer.dom(event).localTarget;
             if (!this.url && this.autoUrl) {
                 this.url = window.location.href;
@@ -223,7 +223,7 @@
             this.$.shareMenu.close();
         }
 
-        _openPopup: function(url, title, w, h) {
+        _openPopup(url, title, w, h) {
             //Center and open the popup.
             var y = window.top.outerHeight / 2 + window.top.screenY - (h / 2)
             var x = window.top.outerWidth / 2 + window.top.screenX - (w / 2)
