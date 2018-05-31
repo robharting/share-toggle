@@ -12,7 +12,8 @@
     "eslint-plugin-import": "^2.12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "polymer serve --open",
+    "test": "wct --skip-selenium-install"
   },
   "repository": {
     "type": "git",
