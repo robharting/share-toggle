@@ -1,8 +1,13 @@
 {
-  "verbose": true,
+  "verbose": false,
   "plugins": {
     "local": {
-      "browsers": ["chrome", "firefox"]
+      "browsers": [
+        "chrome"
+      ]
     }
-  }
+  },
+  "suites": [
+    "test/index.html"
+  ]
 }
