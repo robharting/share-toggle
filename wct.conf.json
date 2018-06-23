@@ -2,12 +2,7 @@
   "verbose": false,
   "plugins": {
     "local": {
-      "browsers": [
-        "chrome"
-      ]
+      "browsers": ["chrome", "firefox"]
     }
-  },
-  "suites": [
-    "test/index.html"
-  ]
+  }
 }

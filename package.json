@@ -4,7 +4,7 @@
   "description": "Social share toggle ",
   "main": "index.html",
   "dependencies": {
-    "web-component-tester": "^6.6.0"
+    "web-component-tester": "^6.7.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -13,7 +13,8 @@
   },
   "scripts": {
     "start": "polymer serve --open",
-    "test": "wct --skip-selenium-install"
+    "test": "wct --skip-selenium-install",
+    "test-persist": "wct --skip-selenium-install -p"
   },
   "repository": {
     "type": "git",

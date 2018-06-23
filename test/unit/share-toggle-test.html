@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+    <link rel="import" href="../../share-toggle.html">
+</head>
+<body>
+
+<test-fixture id="share-toggle-fixture">
+    <template>
+        <share-toggle id="shareToggleId" toggle-icon="social:share"></share-toggle>
+    </template>
+</test-fixture>
+
+<script>
+    suite('<share-toggle>', function() {
+        let myEl;
+        setup(function() {
+            myEl = fixture('share-toggle-fixture');
+        });
+        test('icon exists', function() {
+            // debugger
+            // assert.isTrue(document.getElementById('share-toggle-fixture').icon);clear
+            assert.equal(myEl.id, 'shareToggleId');
+        });
+
+        test('sets the "icon" property from markup', function() {
+            assert.equal(myEl.toggleIcon, 'social:share');
+        });
+
+    });
+</script>
+
+<script>
+    a11ySuite('NoLabel');
+</script>
+
+
+</body>
+</html>
